@@ -1,8 +1,3 @@
-DROP DATABASE IF EXISTS infernal_escape;
-CREATE DATABASE infernal_escape;
-
-USE infernal_escape;
-
 DROP TABLE IF EXISTS vehicle;
 CREATE TABLE vehicle (
 	vehicleId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
