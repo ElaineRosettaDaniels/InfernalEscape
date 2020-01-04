@@ -59,3 +59,21 @@ CREATE TABLE stationRider (
     FOREIGN KEY (stationId) REFERENCES station (stationId),
     FOREIGN KEY (riderId) REFERENCES rider (riderId)
 );
+
+INSERT INTO `fw8nc1res4k8oqg9`.`vehicle` (`veName`, `veType`, `armor`, `speed`, `dexBonus`, `strBonus`, `hitPoints`, `damThres`, `misThres`, `totalDist`, `ichorBoosted`, `ichorUses`, `maxRiders`) 
+	VALUES ('TormentorOne', 'Tormentor', '21', '100', '2', '3', '60', '10', '20', '0', '0', '3', '4'),
+	('TormentorTwo', 'Tormentor', '21', '100', '2', '3', '60', '10', '20', '0', '0', '3', '4'),
+	('ScavengerOne', 'Scavenger', '20', '100', '1', '5', '150', '10', '20', '0', '0', '3', '8');
+    
+    INSERT INTO `fw8nc1res4k8oqg9`.`rider` (`riName`, `armor`, `hitPoints`) 
+    VALUES ('RiderA', '13', '30'),
+	('RiderB', '13', '30'),
+	('RiderC', '13', '30'),
+	('RiderD', '13', '30'),
+	('RiderE', '13', '30'),
+	('RiderF', '13', '30'),
+	('RiderG', '13', '30'),
+	('RiderH', '13', '30'),
+	('RiderI', '13', '30'),
+	('RiderJ', '13', '30'),
+	('RiderK', '13', '30');
