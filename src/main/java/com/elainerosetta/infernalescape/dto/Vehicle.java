@@ -13,6 +13,8 @@ import java.util.Objects;
  */
 public class Vehicle {
     
+    // going to need a "grappled" condition
+
     private int vehicleId;
     private String veName;
     private String veType;
