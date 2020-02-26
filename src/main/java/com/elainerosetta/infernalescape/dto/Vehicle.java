@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 public class Vehicle {
     
-    // going to need a "grappled" condition
+    // going to need a "grappled" condition, grappled can't move beyond 20 of grappler
 
     private int vehicleId;
     private String veName;
