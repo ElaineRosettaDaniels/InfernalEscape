@@ -13,7 +13,8 @@ import java.util.Objects;
  */
 public class Vehicle {
     
-    // going to need a "grappled" condition, grappled can't move beyond 20 of grappler
+    // TODO: going to need a "grappled" condition, grappled can't move beyond 20 ft of grappler
+    // 
 
     private int vehicleId;
     private String veName;

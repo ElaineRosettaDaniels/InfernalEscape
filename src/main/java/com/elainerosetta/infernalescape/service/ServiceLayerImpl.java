@@ -70,10 +70,12 @@ public class ServiceLayerImpl implements ServiceLayer {
         if (distBtwn <= 120) {
             hitRoll = rollDie(1, 20) + 5 + atk.getDexBonus(); // 5 is harpoon's base hit bonus
         }
+
         // if hitRoll can hit target's AC, roll damage (2d8 + dex):
         if (hitRoll >= tar.getArmor()) {
             damage = rollDie(2, 8) + atk.getDexBonus();
         }
+
         return damage;
     }
     
@@ -83,12 +85,15 @@ public class ServiceLayerImpl implements ServiceLayer {
         int saveRoll = 0;
         int damage = 0;
         int dC = 13;
+
         if (distBtwn <= 5) {
             saveRoll = rollDie(1, 20) + tar.getDexBonus();
         }
+
         if (saveRoll < dC) {
             damage = rollDie(2, 10) + atk.getDexBonus();
         }
+
         return damage;
     }
 
@@ -97,12 +102,15 @@ public class ServiceLayerImpl implements ServiceLayer {
         int distBtwn = Math.abs(tar.getTotalDist() - atk.getTotalDist());
         int hitRoll = 0;
         int damage = 0;
+
         if (distBtwn <= 15) {
             hitRoll = rollDie(1, 20) + 5 + atk.getStrBonus();
         }
+
         if (hitRoll >= tar.getArmor()) {
             damage = rollDie(8, 8) + atk.getStrBonus();
         }
+
         return damage;
     }
 
@@ -111,12 +119,15 @@ public class ServiceLayerImpl implements ServiceLayer {
         int distBtwn = Math.abs(tar.getTotalDist() - atk.getTotalDist());
         int hitRoll = 0;
         int damage = 0;
+
         if (distBtwn <= 5) {
             hitRoll = rollDie(1, 20) + 5 + atk.getStrBonus();
         }
+
         if (hitRoll >= tar.getArmor()) {
             damage = rollDie(6, 6) + atk.getStrBonus();
         }
+
         return damage;
     }
     
@@ -126,17 +137,17 @@ public class ServiceLayerImpl implements ServiceLayer {
         int saveRoll = 0;
         int damage = 0;
         int dC = 12;
+
         if (distBtwn <= 30) {
             saveRoll = rollDie(1, 20) + tar.getDexBonus();
         }
-        // full dmg on fail
-        if (saveRoll < dC) {
-            damage = rollDie(9, 8);
-        }
-        // half dmg on success
+
         if (saveRoll >= dC) {
             damage = rollDie(9, 8) / 2;
+        } else {
+            damage = rollDie(9, 8);
         }
+
         return damage;
     }
     
@@ -146,17 +157,17 @@ public class ServiceLayerImpl implements ServiceLayer {
         int saveRoll = 0;
         int damage = 0;
         int dC = 15;
+        
         if (distBtwn <= 60) {
             saveRoll = rollDie(1, 20) + tar.getDexBonus();
         }
-        // full dmg on fail
-        if (saveRoll < dC) {
-            damage = rollDie(4, 8);
-        }
-        // half dmg on success
+
         if (saveRoll >= dC) {
             damage = rollDie(4, 8) / 2;
+        } else {
+            damage = rollDie(4, 8);
         }
+
         return damage;
     }
     
