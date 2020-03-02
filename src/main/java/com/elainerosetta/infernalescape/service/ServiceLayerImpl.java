@@ -18,8 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
- *
- * @author Asus1
+ * TODO: add grappled condition logic, add ichor check function
+ * 
  */
 @Repository
 public class ServiceLayerImpl implements ServiceLayer {
