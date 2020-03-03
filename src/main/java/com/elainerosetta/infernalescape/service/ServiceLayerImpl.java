@@ -19,7 +19,8 @@ import org.springframework.stereotype.Repository;
 
 /**
  * TODO: add grappled condition logic, add ichor check function
- * 
+ *  If you got skin in the game, you stay in the game. But you don't get a win
+ *  unless you play in the game.
  */
 @Repository
 public class ServiceLayerImpl implements ServiceLayer {
