@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * TODO: add grappled condition logic, add ichor check function
- *  The virus will kill us all.
+ * 
  */
 @Repository
 public class ServiceLayerImpl implements ServiceLayer {
