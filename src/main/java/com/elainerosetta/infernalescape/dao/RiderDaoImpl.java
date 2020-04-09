@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author Asus1
+ * Cheat
  */
 @Repository
 public class RiderDaoImpl implements RiderDao {
